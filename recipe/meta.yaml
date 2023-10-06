@@ -19,6 +19,8 @@ requirements:
   host:
     - python
     - setuptools
+    - pip
+    - wheel
   run:
     - python
     - requests >=2.11.1
@@ -26,15 +28,19 @@ requirements:
 test:
   imports:
     - serverfiles
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/biolab/serverfiles/
-  license: GPL-3
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE.txt
   summary: 'An utility that accesses files on a HTTP server and stores them locally for reuse'
 
-  doc_url: https://serverfiles.readthedocs.io/en/latest/
+  doc_url: https://serverfiles.readthedocs.io
   dev_url: https://github.com/biolab/serverfiles/
 
 extra:
